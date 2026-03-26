@@ -6,19 +6,15 @@
     <title>プレゼントページ</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* 基本設定 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            margin: 0;
             font-family: 'Noto Sans JP', sans-serif;
             color: #333;
-            line-height: 1.6;
             background-color: #fff;
         }
 
-        /* メインビジュアル */
         .hero {
             width: 100%;
-            text-align: center;
         }
         .hero img {
             width: 100%;
@@ -26,40 +22,46 @@
             display: block;
         }
 
-        /* ボタンセクション */
         .action-buttons {
-            padding: 30px 20px;
-            background-color: #ffffff;
+            padding: 20px 20px 15px;
+            background-color: #fff;
             text-align: center;
         }
 
-        .btn {
+        .btn-line {
             display: block;
             max-width: 300px;
-            margin: 10px auto;
-            padding: 15px;
-            border-radius: 5px;
+            margin: 0 auto;
+            padding: 14px 15px;
+            border-radius: 6px;
+            background-color: #06C755;
             text-decoration: none;
             font-weight: bold;
+            font-size: 0.95rem;
             color: #fff;
             transition: opacity 0.3s;
         }
-        .btn-line { background-color: #06C755; }
-        .btn:hover { opacity: 0.8; }
+        .btn-line:hover { opacity: 0.8; }
+
+        .note-text {
+            margin: 8px auto 0;
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: #ff4444;
+        }
 
         .help-text {
-            margin: 15px auto 5px auto;
-            font-size: clamp(0.65rem, 3.2vw, 0.85rem);
+            margin: 6px auto 0;
+            font-size: 0.8rem;
+            font-weight: bold;
             color: #555;
             white-space: nowrap;
-            font-weight: bold;
         }
 
         .divider {
-            height: 30px;
+            height: 25px;
         }
 
-        /* 追加画像のスタイル */
         .step0-image {
             width: 100%;
             max-width: 250px;
@@ -70,7 +72,6 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        /* ブラウザで開く手順画像の横並び設定と番号表記 */
         .browser-images {
             display: flex;
             justify-content: center;
@@ -99,16 +100,18 @@
 <body>
 
 <div class="hero">
-    <img src="LP.PNG" alt="LINE">
+    <img src="LP.JPG" alt="LINE">
 </div>
 
 <section class="action-buttons">
-    <a href="https://lin.ee/5q6GIjW　" class="btn btn-line">LINEアプリを開く</a>
+    <a href="https://lin.ee/5q6GIjW" class="btn-line">LINEアプリを開く</a>
+    <p class="note-text">上のボタンは長押しして開いて下さい</p>
+    <p class="help-text">🔻開けない場合は以下をご確認ください🔻</p>
+</section>
 
-    <p class="help-text">🔻開けない場合は下にスクロールしてください🔻</p>
+<div class="divider"></div>
 
-    <div class="divider"></div>
-
+<section class="action-buttons">
     <p><b>ボタンを長押し→リンクを開く</b></p>
 
     <img src="step0.JPEG" alt="step0.JPEG" class="step0-image">
